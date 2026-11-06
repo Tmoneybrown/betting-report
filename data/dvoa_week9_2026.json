@@ -1,0 +1,1299 @@
+{
+  "schema": "dvoa_week_matchups_v1",
+  "week": 9,
+  "season": 2026,
+  "slate_dates": "2026-11-05 to 2026-11-09",
+  "purpose": "Structured verified DVOA offense-vs-opposing-defense dataset for all Week 9 Circa games. For website layout only; this file does not modify the site.",
+  "disclaimer": "Rank gap (opp_def_rank - offense_rank) describes mismatch size only. It is NOT a point edge, cover probability, or quantified betting advantage.",
+  "sources": {
+    "dvoa_main": {
+      "url": "https://ftnfantasy.com/nfl/week-8-dvoa-here-come-the-jaguars",
+      "title": "Week 8 DVOA: Here Come the Jaguars",
+      "author": "Aaron Schatz",
+      "published": "2026-11-03",
+      "data_through": "Week 8 of 2026",
+      "fetched": "2026-11-06",
+      "excerpt": "These are the FTN DVOA and DAVE ratings through eight weeks of 2026. ... As always, positive numbers represent more points so DEFENSE is better when it is NEGATIVE.",
+      "table_excerpt_first_last": "RK1 SF TOTAL 35.7% OFF 29.7% (1) DEF -9.1% (8); ... RK32 LAC TOTAL -35.8% OFF -31.2% (32) DEF 3.1% (18)"
+    },
+    "pass_rush_sf_lv": {
+      "url": "https://ftnfantasy.com/nfl/bet-of-the-week-for-nfl-week-9",
+      "title": "Bet of the Week for NFL Week 9",
+      "author": "Josh Gross",
+      "published": "2026-11-04",
+      "fetched": "2026-11-06",
+      "excerpt": "They'll see a very vulnerable Raiders defense, currently ranking 27th in DVOA against the pass and dead last in DVOA against the run. On the contrary, the 49ers rank first in DVOA through the air and fifth in DVOA on the ground this season.",
+      "note": "Only SF offense vs LV defense pass/rush ranks verified. Percentages not published in that article. All other pass/rush fields are null."
+    },
+    "schedule": {
+      "path": "/workspace/ats/circa_week9_lines.md",
+      "description": "Week 9 (2026) Circa Million VIII contest spreads; sheet order; home/away not marked."
+    }
+  },
+  "methodology_notes": [
+    "Offense and defense ranks/% taken from FTN Week 8 article table (Nov 3, 2026).",
+    "Circa abbr WSH mapped to FTN WAS for DVOA lookup; Circa abbr preserved on game objects.",
+    "home_away left null \u2014 Circa sheet does not mark home/away.",
+    "TNF JAX vs BAL marked status=already_played; score null (not looked up / not verified here).",
+    "Unavailable pass/rush fields are JSON null with no filler.",
+    "No corrections vs prior sample ranks \u2014 re-fetched Nov 3 table matches prior transcription."
+  ],
+  "validations": {
+    "team_count": 32,
+    "total_rank_unique_1_to_32": true,
+    "offense_rank_unique_1_to_32": true,
+    "defense_rank_unique_1_to_32": true,
+    "special_teams_rank_unique_1_to_32": true,
+    "game_count": 15,
+    "side_comparison_count": 30,
+    "pass_rush_populated_sides": 1,
+    "pass_rush_null_sides": 29
+  },
+  "teams": [
+    {
+      "abbr": "SF",
+      "name": "San Francisco 49ers",
+      "w_l": "6-1",
+      "total_rank": 1,
+      "total_dvoa_pct": 35.7,
+      "offense_rank": 1,
+      "offense_dvoa_pct": 29.7,
+      "defense_rank": 8,
+      "defense_dvoa_pct": -9.1,
+      "special_teams_rank": 26,
+      "special_teams_dvoa_pct": -3.1
+    },
+    {
+      "abbr": "JAX",
+      "name": "Jacksonville Jaguars",
+      "w_l": "5-2",
+      "total_rank": 2,
+      "total_dvoa_pct": 33.6,
+      "offense_rank": 5,
+      "offense_dvoa_pct": 17.3,
+      "defense_rank": 5,
+      "defense_dvoa_pct": -15.2,
+      "special_teams_rank": 13,
+      "special_teams_dvoa_pct": 1.1
+    },
+    {
+      "abbr": "CIN",
+      "name": "Cincinnati Bengals",
+      "w_l": "5-2",
+      "total_rank": 3,
+      "total_dvoa_pct": 26.6,
+      "offense_rank": 2,
+      "offense_dvoa_pct": 23.8,
+      "defense_rank": 15,
+      "defense_dvoa_pct": 0.0,
+      "special_teams_rank": 9,
+      "special_teams_dvoa_pct": 2.9
+    },
+    {
+      "abbr": "BUF",
+      "name": "Buffalo Bills",
+      "w_l": "6-1",
+      "total_rank": 4,
+      "total_dvoa_pct": 25.3,
+      "offense_rank": 3,
+      "offense_dvoa_pct": 23.4,
+      "defense_rank": 20,
+      "defense_dvoa_pct": 4.5,
+      "special_teams_rank": 2,
+      "special_teams_dvoa_pct": 6.5
+    },
+    {
+      "abbr": "TB",
+      "name": "Tampa Bay Buccaneers",
+      "w_l": "3-5",
+      "total_rank": 5,
+      "total_dvoa_pct": 20.3,
+      "offense_rank": 19,
+      "offense_dvoa_pct": -5.9,
+      "defense_rank": 1,
+      "defense_dvoa_pct": -22.2,
+      "special_teams_rank": 3,
+      "special_teams_dvoa_pct": 4.1
+    },
+    {
+      "abbr": "PIT",
+      "name": "Pittsburgh Steelers",
+      "w_l": "6-2",
+      "total_rank": 6,
+      "total_dvoa_pct": 17.6,
+      "offense_rank": 12,
+      "offense_dvoa_pct": 6.3,
+      "defense_rank": 7,
+      "defense_dvoa_pct": -12.5,
+      "special_teams_rank": 21,
+      "special_teams_dvoa_pct": -1.2
+    },
+    {
+      "abbr": "LAR",
+      "name": "Los Angeles Rams",
+      "w_l": "4-4",
+      "total_rank": 7,
+      "total_dvoa_pct": 16.0,
+      "offense_rank": 6,
+      "offense_dvoa_pct": 13.7,
+      "defense_rank": 6,
+      "defense_dvoa_pct": -13.8,
+      "special_teams_rank": 32,
+      "special_teams_dvoa_pct": -11.5
+    },
+    {
+      "abbr": "KC",
+      "name": "Kansas City Chiefs",
+      "w_l": "5-2",
+      "total_rank": 8,
+      "total_dvoa_pct": 14.8,
+      "offense_rank": 4,
+      "offense_dvoa_pct": 18.9,
+      "defense_rank": 13,
+      "defense_dvoa_pct": -0.6,
+      "special_teams_rank": 29,
+      "special_teams_dvoa_pct": -4.6
+    },
+    {
+      "abbr": "NE",
+      "name": "New England Patriots",
+      "w_l": "5-3",
+      "total_rank": 9,
+      "total_dvoa_pct": 12.9,
+      "offense_rank": 11,
+      "offense_dvoa_pct": 6.9,
+      "defense_rank": 11,
+      "defense_dvoa_pct": -7.1,
+      "special_teams_rank": 20,
+      "special_teams_dvoa_pct": -1.1
+    },
+    {
+      "abbr": "MIN",
+      "name": "Minnesota Vikings",
+      "w_l": "6-1",
+      "total_rank": 10,
+      "total_dvoa_pct": 12.8,
+      "offense_rank": 30,
+      "offense_dvoa_pct": -14.3,
+      "defense_rank": 3,
+      "defense_dvoa_pct": -18.1,
+      "special_teams_rank": 1,
+      "special_teams_dvoa_pct": 8.9
+    },
+    {
+      "abbr": "DEN",
+      "name": "Denver Broncos",
+      "w_l": "6-2",
+      "total_rank": 11,
+      "total_dvoa_pct": 11.0,
+      "offense_rank": 15,
+      "offense_dvoa_pct": -0.1,
+      "defense_rank": 10,
+      "defense_dvoa_pct": -7.6,
+      "special_teams_rank": 6,
+      "special_teams_dvoa_pct": 3.5
+    },
+    {
+      "abbr": "SEA",
+      "name": "Seattle Seahawks",
+      "w_l": "4-4",
+      "total_rank": 12,
+      "total_dvoa_pct": 10.5,
+      "offense_rank": 22,
+      "offense_dvoa_pct": -10.2,
+      "defense_rank": 2,
+      "defense_dvoa_pct": -19.5,
+      "special_teams_rank": 12,
+      "special_teams_dvoa_pct": 1.2
+    },
+    {
+      "abbr": "CHI",
+      "name": "Chicago Bears",
+      "w_l": "6-2",
+      "total_rank": 13,
+      "total_dvoa_pct": 9.3,
+      "offense_rank": 10,
+      "offense_dvoa_pct": 7.0,
+      "defense_rank": 16,
+      "defense_dvoa_pct": 0.9,
+      "special_teams_rank": 7,
+      "special_teams_dvoa_pct": 3.2
+    },
+    {
+      "abbr": "HOU",
+      "name": "Houston Texans",
+      "w_l": "2-5",
+      "total_rank": 14,
+      "total_dvoa_pct": 6.7,
+      "offense_rank": 9,
+      "offense_dvoa_pct": 8.4,
+      "defense_rank": 17,
+      "defense_dvoa_pct": 1.3,
+      "special_teams_rank": 17,
+      "special_teams_dvoa_pct": -0.4
+    },
+    {
+      "abbr": "GB",
+      "name": "Green Bay Packers",
+      "w_l": "5-3",
+      "total_rank": 15,
+      "total_dvoa_pct": 5.9,
+      "offense_rank": 20,
+      "offense_dvoa_pct": -6.4,
+      "defense_rank": 4,
+      "defense_dvoa_pct": -15.7,
+      "special_teams_rank": 28,
+      "special_teams_dvoa_pct": -3.5
+    },
+    {
+      "abbr": "DET",
+      "name": "Detroit Lions",
+      "w_l": "5-2",
+      "total_rank": 16,
+      "total_dvoa_pct": 3.3,
+      "offense_rank": 8,
+      "offense_dvoa_pct": 10.4,
+      "defense_rank": 26,
+      "defense_dvoa_pct": 10.1,
+      "special_teams_rank": 8,
+      "special_teams_dvoa_pct": 3.0
+    },
+    {
+      "abbr": "CAR",
+      "name": "Carolina Panthers",
+      "w_l": "3-4",
+      "total_rank": 17,
+      "total_dvoa_pct": 1.5,
+      "offense_rank": 13,
+      "offense_dvoa_pct": 1.9,
+      "defense_rank": 19,
+      "defense_dvoa_pct": 4.3,
+      "special_teams_rank": 4,
+      "special_teams_dvoa_pct": 4.0
+    },
+    {
+      "abbr": "DAL",
+      "name": "Dallas Cowboys",
+      "w_l": "3-5",
+      "total_rank": 18,
+      "total_dvoa_pct": 0.7,
+      "offense_rank": 7,
+      "offense_dvoa_pct": 12.4,
+      "defense_rank": 29,
+      "defense_dvoa_pct": 15.5,
+      "special_teams_rank": 5,
+      "special_teams_dvoa_pct": 3.8
+    },
+    {
+      "abbr": "BAL",
+      "name": "Baltimore Ravens",
+      "w_l": "4-4",
+      "total_rank": 19,
+      "total_dvoa_pct": -3.1,
+      "offense_rank": 18,
+      "offense_dvoa_pct": -2.3,
+      "defense_rank": 14,
+      "defense_dvoa_pct": -0.4,
+      "special_teams_rank": 22,
+      "special_teams_dvoa_pct": -1.2
+    },
+    {
+      "abbr": "ATL",
+      "name": "Atlanta Falcons",
+      "w_l": "3-5",
+      "total_rank": 20,
+      "total_dvoa_pct": -7.1,
+      "offense_rank": 23,
+      "offense_dvoa_pct": -10.5,
+      "defense_rank": 9,
+      "defense_dvoa_pct": -8.2,
+      "special_teams_rank": 30,
+      "special_teams_dvoa_pct": -4.9
+    },
+    {
+      "abbr": "ARI",
+      "name": "Arizona Cardinals",
+      "w_l": "3-5",
+      "total_rank": 21,
+      "total_dvoa_pct": -9.5,
+      "offense_rank": 17,
+      "offense_dvoa_pct": -2.0,
+      "defense_rank": 25,
+      "defense_dvoa_pct": 8.4,
+      "special_teams_rank": 15,
+      "special_teams_dvoa_pct": 0.9
+    },
+    {
+      "abbr": "CLE",
+      "name": "Cleveland Browns",
+      "w_l": "5-3",
+      "total_rank": 22,
+      "total_dvoa_pct": -9.9,
+      "offense_rank": 29,
+      "offense_dvoa_pct": -14.0,
+      "defense_rank": 12,
+      "defense_dvoa_pct": -5.4,
+      "special_teams_rank": 23,
+      "special_teams_dvoa_pct": -1.4
+    },
+    {
+      "abbr": "NYJ",
+      "name": "New York Jets",
+      "w_l": "2-6",
+      "total_rank": 23,
+      "total_dvoa_pct": -11.7,
+      "offense_rank": 16,
+      "offense_dvoa_pct": -0.2,
+      "defense_rank": 24,
+      "defense_dvoa_pct": 8.3,
+      "special_teams_rank": 27,
+      "special_teams_dvoa_pct": -3.2
+    },
+    {
+      "abbr": "WAS",
+      "name": "Washington Commanders",
+      "w_l": "2-4-1",
+      "total_rank": 24,
+      "total_dvoa_pct": -12.2,
+      "offense_rank": 21,
+      "offense_dvoa_pct": -7.7,
+      "defense_rank": 22,
+      "defense_dvoa_pct": 5.5,
+      "special_teams_rank": 14,
+      "special_teams_dvoa_pct": 1.0
+    },
+    {
+      "abbr": "LV",
+      "name": "Las Vegas Raiders",
+      "w_l": "4-4",
+      "total_rank": 25,
+      "total_dvoa_pct": -13.6,
+      "offense_rank": 14,
+      "offense_dvoa_pct": 1.3,
+      "defense_rank": 31,
+      "defense_dvoa_pct": 17.1,
+      "special_teams_rank": 10,
+      "special_teams_dvoa_pct": 2.1
+    },
+    {
+      "abbr": "NYG",
+      "name": "New York Giants",
+      "w_l": "4-2-1",
+      "total_rank": 26,
+      "total_dvoa_pct": -16.6,
+      "offense_rank": 24,
+      "offense_dvoa_pct": -10.9,
+      "defense_rank": 21,
+      "defense_dvoa_pct": 5.3,
+      "special_teams_rank": 18,
+      "special_teams_dvoa_pct": -0.5
+    },
+    {
+      "abbr": "IND",
+      "name": "Indianapolis Colts",
+      "w_l": "2-6",
+      "total_rank": 27,
+      "total_dvoa_pct": -21.3,
+      "offense_rank": 28,
+      "offense_dvoa_pct": -13.3,
+      "defense_rank": 27,
+      "defense_dvoa_pct": 10.1,
+      "special_teams_rank": 11,
+      "special_teams_dvoa_pct": 2.1
+    },
+    {
+      "abbr": "PHI",
+      "name": "Philadelphia Eagles",
+      "w_l": "2-6",
+      "total_rank": 28,
+      "total_dvoa_pct": -27.7,
+      "offense_rank": 31,
+      "offense_dvoa_pct": -18.7,
+      "defense_rank": 23,
+      "defense_dvoa_pct": 7.5,
+      "special_teams_rank": 24,
+      "special_teams_dvoa_pct": -1.5
+    },
+    {
+      "abbr": "NO",
+      "name": "New Orleans Saints",
+      "w_l": "2-5",
+      "total_rank": 29,
+      "total_dvoa_pct": -29.9,
+      "offense_rank": 25,
+      "offense_dvoa_pct": -12.1,
+      "defense_rank": 30,
+      "defense_dvoa_pct": 16.9,
+      "special_teams_rank": 19,
+      "special_teams_dvoa_pct": -0.9
+    },
+    {
+      "abbr": "TEN",
+      "name": "Tennessee Titans",
+      "w_l": "1-7",
+      "total_rank": 30,
+      "total_dvoa_pct": -32.5,
+      "offense_rank": 26,
+      "offense_dvoa_pct": -12.7,
+      "defense_rank": 32,
+      "defense_dvoa_pct": 20.5,
+      "special_teams_rank": 16,
+      "special_teams_dvoa_pct": 0.7
+    },
+    {
+      "abbr": "MIA",
+      "name": "Miami Dolphins",
+      "w_l": "1-6",
+      "total_rank": 31,
+      "total_dvoa_pct": -34.3,
+      "offense_rank": 27,
+      "offense_dvoa_pct": -13.0,
+      "defense_rank": 28,
+      "defense_dvoa_pct": 13.3,
+      "special_teams_rank": 31,
+      "special_teams_dvoa_pct": -8.0
+    },
+    {
+      "abbr": "LAC",
+      "name": "Los Angeles Chargers",
+      "w_l": "0-7",
+      "total_rank": 32,
+      "total_dvoa_pct": -35.8,
+      "offense_rank": 32,
+      "offense_dvoa_pct": -31.2,
+      "defense_rank": 18,
+      "defense_dvoa_pct": 3.1,
+      "special_teams_rank": 25,
+      "special_teams_dvoa_pct": -1.5
+    }
+  ],
+  "pass_rush_verified": {
+    "offense_team": "SF",
+    "defense_team": "LV",
+    "pass": {
+      "offense_rank": 1,
+      "defense_rank": 27,
+      "offense_dvoa_pct": null,
+      "defense_dvoa_pct": null,
+      "source_quote": "the 49ers rank first in DVOA through the air ... Raiders defense, currently ranking 27th in DVOA against the pass"
+    },
+    "rush": {
+      "offense_rank": 5,
+      "defense_rank": 32,
+      "offense_dvoa_pct": null,
+      "defense_dvoa_pct": null,
+      "source_quote": "the 49ers rank ... fifth in DVOA on the ground ... Raiders defense ... dead last in DVOA against the run"
+    },
+    "source_url": "https://ftnfantasy.com/nfl/bet-of-the-week-for-nfl-week-9",
+    "source_published": "2026-11-04",
+    "source_author": "Josh Gross"
+  },
+  "games": [
+    {
+      "game_index": 1,
+      "date": "2026-11-05",
+      "day": "Thu",
+      "circa_rotation": "1/2",
+      "status": "already_played",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "JAX -10 vs BAL +10",
+      "team_a": {
+        "circa_abbr": "JAX",
+        "ftn_abbr": "JAX",
+        "name": "Jacksonville Jaguars",
+        "circa_spread": -10
+      },
+      "team_b": {
+        "circa_abbr": "BAL",
+        "ftn_abbr": "BAL",
+        "name": "Baltimore Ravens",
+        "circa_spread": 10
+      },
+      "sides": [
+        {
+          "offense_team": "JAX",
+          "offense_team_name": "Jacksonville Jaguars",
+          "defense_team": "BAL",
+          "defense_team_name": "Baltimore Ravens",
+          "offense_dvoa_pct": 17.3,
+          "offense_rank": 5,
+          "defense_dvoa_pct": -0.4,
+          "defense_rank": 14,
+          "rank_gap_opp_def_minus_off": 9,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "BAL",
+          "offense_team_name": "Baltimore Ravens",
+          "defense_team": "JAX",
+          "defense_team_name": "Jacksonville Jaguars",
+          "offense_dvoa_pct": -2.3,
+          "offense_rank": 18,
+          "defense_dvoa_pct": -15.2,
+          "defense_rank": 5,
+          "rank_gap_opp_def_minus_off": -13,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 2,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "3/4",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "CIN -3 vs ATL +3",
+      "team_a": {
+        "circa_abbr": "CIN",
+        "ftn_abbr": "CIN",
+        "name": "Cincinnati Bengals",
+        "circa_spread": -3
+      },
+      "team_b": {
+        "circa_abbr": "ATL",
+        "ftn_abbr": "ATL",
+        "name": "Atlanta Falcons",
+        "circa_spread": 3
+      },
+      "sides": [
+        {
+          "offense_team": "CIN",
+          "offense_team_name": "Cincinnati Bengals",
+          "defense_team": "ATL",
+          "defense_team_name": "Atlanta Falcons",
+          "offense_dvoa_pct": 23.8,
+          "offense_rank": 2,
+          "defense_dvoa_pct": -8.2,
+          "defense_rank": 9,
+          "rank_gap_opp_def_minus_off": 7,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "ATL",
+          "offense_team_name": "Atlanta Falcons",
+          "defense_team": "CIN",
+          "defense_team_name": "Cincinnati Bengals",
+          "offense_dvoa_pct": -10.5,
+          "offense_rank": 23,
+          "defense_dvoa_pct": 0.0,
+          "defense_rank": 15,
+          "rank_gap_opp_def_minus_off": -8,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 3,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "5/6",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "CLE +3 vs NO -3",
+      "team_a": {
+        "circa_abbr": "CLE",
+        "ftn_abbr": "CLE",
+        "name": "Cleveland Browns",
+        "circa_spread": 3
+      },
+      "team_b": {
+        "circa_abbr": "NO",
+        "ftn_abbr": "NO",
+        "name": "New Orleans Saints",
+        "circa_spread": -3
+      },
+      "sides": [
+        {
+          "offense_team": "CLE",
+          "offense_team_name": "Cleveland Browns",
+          "defense_team": "NO",
+          "defense_team_name": "New Orleans Saints",
+          "offense_dvoa_pct": -14.0,
+          "offense_rank": 29,
+          "defense_dvoa_pct": 16.9,
+          "defense_rank": 30,
+          "rank_gap_opp_def_minus_off": 1,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "NO",
+          "offense_team_name": "New Orleans Saints",
+          "defense_team": "CLE",
+          "defense_team_name": "Cleveland Browns",
+          "offense_dvoa_pct": -12.1,
+          "offense_rank": 25,
+          "defense_dvoa_pct": -5.4,
+          "defense_rank": 12,
+          "rank_gap_opp_def_minus_off": -13,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 4,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "7/8",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "DET -7 vs MIA +7",
+      "team_a": {
+        "circa_abbr": "DET",
+        "ftn_abbr": "DET",
+        "name": "Detroit Lions",
+        "circa_spread": -7
+      },
+      "team_b": {
+        "circa_abbr": "MIA",
+        "ftn_abbr": "MIA",
+        "name": "Miami Dolphins",
+        "circa_spread": 7
+      },
+      "sides": [
+        {
+          "offense_team": "DET",
+          "offense_team_name": "Detroit Lions",
+          "defense_team": "MIA",
+          "defense_team_name": "Miami Dolphins",
+          "offense_dvoa_pct": 10.4,
+          "offense_rank": 8,
+          "defense_dvoa_pct": 13.3,
+          "defense_rank": 28,
+          "rank_gap_opp_def_minus_off": 20,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "MIA",
+          "offense_team_name": "Miami Dolphins",
+          "defense_team": "DET",
+          "defense_team_name": "Detroit Lions",
+          "offense_dvoa_pct": -13.0,
+          "offense_rank": 27,
+          "defense_dvoa_pct": 10.1,
+          "defense_rank": 26,
+          "rank_gap_opp_def_minus_off": -1,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 5,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "9/10",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "LAR -4 vs WSH +4",
+      "team_a": {
+        "circa_abbr": "LAR",
+        "ftn_abbr": "LAR",
+        "name": "Los Angeles Rams",
+        "circa_spread": -4
+      },
+      "team_b": {
+        "circa_abbr": "WSH",
+        "ftn_abbr": "WAS",
+        "name": "Washington Commanders",
+        "circa_spread": 4
+      },
+      "sides": [
+        {
+          "offense_team": "LAR",
+          "offense_team_name": "Los Angeles Rams",
+          "defense_team": "WAS",
+          "defense_team_name": "Washington Commanders",
+          "offense_dvoa_pct": 13.7,
+          "offense_rank": 6,
+          "defense_dvoa_pct": 5.5,
+          "defense_rank": 22,
+          "rank_gap_opp_def_minus_off": 16,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "WAS",
+          "offense_team_name": "Washington Commanders",
+          "defense_team": "LAR",
+          "defense_team_name": "Los Angeles Rams",
+          "offense_dvoa_pct": -7.7,
+          "offense_rank": 21,
+          "defense_dvoa_pct": -13.8,
+          "defense_rank": 6,
+          "rank_gap_opp_def_minus_off": -15,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 6,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "11/12",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "DAL -4.5 vs IND +4.5",
+      "team_a": {
+        "circa_abbr": "DAL",
+        "ftn_abbr": "DAL",
+        "name": "Dallas Cowboys",
+        "circa_spread": -4.5
+      },
+      "team_b": {
+        "circa_abbr": "IND",
+        "ftn_abbr": "IND",
+        "name": "Indianapolis Colts",
+        "circa_spread": 4.5
+      },
+      "sides": [
+        {
+          "offense_team": "DAL",
+          "offense_team_name": "Dallas Cowboys",
+          "defense_team": "IND",
+          "defense_team_name": "Indianapolis Colts",
+          "offense_dvoa_pct": 12.4,
+          "offense_rank": 7,
+          "defense_dvoa_pct": 10.1,
+          "defense_rank": 27,
+          "rank_gap_opp_def_minus_off": 20,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "IND",
+          "offense_team_name": "Indianapolis Colts",
+          "defense_team": "DAL",
+          "defense_team_name": "Dallas Cowboys",
+          "offense_dvoa_pct": -13.3,
+          "offense_rank": 28,
+          "defense_dvoa_pct": 15.5,
+          "defense_rank": 29,
+          "rank_gap_opp_def_minus_off": 1,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 7,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "13/14",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "NYG -3.5 vs PHI +3.5",
+      "team_a": {
+        "circa_abbr": "NYG",
+        "ftn_abbr": "NYG",
+        "name": "New York Giants",
+        "circa_spread": -3.5
+      },
+      "team_b": {
+        "circa_abbr": "PHI",
+        "ftn_abbr": "PHI",
+        "name": "Philadelphia Eagles",
+        "circa_spread": 3.5
+      },
+      "sides": [
+        {
+          "offense_team": "NYG",
+          "offense_team_name": "New York Giants",
+          "defense_team": "PHI",
+          "defense_team_name": "Philadelphia Eagles",
+          "offense_dvoa_pct": -10.9,
+          "offense_rank": 24,
+          "defense_dvoa_pct": 7.5,
+          "defense_rank": 23,
+          "rank_gap_opp_def_minus_off": -1,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "PHI",
+          "offense_team_name": "Philadelphia Eagles",
+          "defense_team": "NYG",
+          "defense_team_name": "New York Giants",
+          "offense_dvoa_pct": -18.7,
+          "offense_rank": 31,
+          "defense_dvoa_pct": 5.3,
+          "defense_rank": 21,
+          "rank_gap_opp_def_minus_off": -10,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 8,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "15/16",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "NYJ +10 vs KC -10",
+      "team_a": {
+        "circa_abbr": "NYJ",
+        "ftn_abbr": "NYJ",
+        "name": "New York Jets",
+        "circa_spread": 10
+      },
+      "team_b": {
+        "circa_abbr": "KC",
+        "ftn_abbr": "KC",
+        "name": "Kansas City Chiefs",
+        "circa_spread": -10
+      },
+      "sides": [
+        {
+          "offense_team": "NYJ",
+          "offense_team_name": "New York Jets",
+          "defense_team": "KC",
+          "defense_team_name": "Kansas City Chiefs",
+          "offense_dvoa_pct": -0.2,
+          "offense_rank": 16,
+          "defense_dvoa_pct": -0.6,
+          "defense_rank": 13,
+          "rank_gap_opp_def_minus_off": -3,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "KC",
+          "offense_team_name": "Kansas City Chiefs",
+          "defense_team": "NYJ",
+          "defense_team_name": "New York Jets",
+          "offense_dvoa_pct": 18.9,
+          "offense_rank": 4,
+          "defense_dvoa_pct": 8.3,
+          "defense_rank": 24,
+          "rank_gap_opp_def_minus_off": 20,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 9,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "17/18",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "DEN -2.5 vs CAR +2.5",
+      "team_a": {
+        "circa_abbr": "DEN",
+        "ftn_abbr": "DEN",
+        "name": "Denver Broncos",
+        "circa_spread": -2.5
+      },
+      "team_b": {
+        "circa_abbr": "CAR",
+        "ftn_abbr": "CAR",
+        "name": "Carolina Panthers",
+        "circa_spread": 2.5
+      },
+      "sides": [
+        {
+          "offense_team": "DEN",
+          "offense_team_name": "Denver Broncos",
+          "defense_team": "CAR",
+          "defense_team_name": "Carolina Panthers",
+          "offense_dvoa_pct": -0.1,
+          "offense_rank": 15,
+          "defense_dvoa_pct": 4.3,
+          "defense_rank": 19,
+          "rank_gap_opp_def_minus_off": 4,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "CAR",
+          "offense_team_name": "Carolina Panthers",
+          "defense_team": "DEN",
+          "defense_team_name": "Denver Broncos",
+          "offense_dvoa_pct": 1.9,
+          "offense_rank": 13,
+          "defense_dvoa_pct": -7.6,
+          "defense_rank": 10,
+          "rank_gap_opp_def_minus_off": -3,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 10,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "19/20",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "LV +10 vs SF -10",
+      "team_a": {
+        "circa_abbr": "LV",
+        "ftn_abbr": "LV",
+        "name": "Las Vegas Raiders",
+        "circa_spread": 10
+      },
+      "team_b": {
+        "circa_abbr": "SF",
+        "ftn_abbr": "SF",
+        "name": "San Francisco 49ers",
+        "circa_spread": -10
+      },
+      "sides": [
+        {
+          "offense_team": "LV",
+          "offense_team_name": "Las Vegas Raiders",
+          "defense_team": "SF",
+          "defense_team_name": "San Francisco 49ers",
+          "offense_dvoa_pct": 1.3,
+          "offense_rank": 14,
+          "defense_dvoa_pct": -9.1,
+          "defense_rank": 8,
+          "rank_gap_opp_def_minus_off": -6,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "SF",
+          "offense_team_name": "San Francisco 49ers",
+          "defense_team": "LV",
+          "defense_team_name": "Las Vegas Raiders",
+          "offense_dvoa_pct": 29.7,
+          "offense_rank": 1,
+          "defense_dvoa_pct": 17.1,
+          "defense_rank": 31,
+          "rank_gap_opp_def_minus_off": 30,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": {
+            "offense_rank": 1,
+            "defense_rank": 27,
+            "offense_dvoa_pct": null,
+            "defense_dvoa_pct": null
+          },
+          "rush": {
+            "offense_rank": 5,
+            "defense_rank": 32,
+            "offense_dvoa_pct": null,
+            "defense_dvoa_pct": null,
+            "defense_rank_note": "source said dead last (=32)"
+          }
+        }
+      ]
+    },
+    {
+      "game_index": 11,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "21/22",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "HOU -4.5 vs LAC +4.5",
+      "team_a": {
+        "circa_abbr": "HOU",
+        "ftn_abbr": "HOU",
+        "name": "Houston Texans",
+        "circa_spread": -4.5
+      },
+      "team_b": {
+        "circa_abbr": "LAC",
+        "ftn_abbr": "LAC",
+        "name": "Los Angeles Chargers",
+        "circa_spread": 4.5
+      },
+      "sides": [
+        {
+          "offense_team": "HOU",
+          "offense_team_name": "Houston Texans",
+          "defense_team": "LAC",
+          "defense_team_name": "Los Angeles Chargers",
+          "offense_dvoa_pct": 8.4,
+          "offense_rank": 9,
+          "defense_dvoa_pct": 3.1,
+          "defense_rank": 18,
+          "rank_gap_opp_def_minus_off": 9,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "LAC",
+          "offense_team_name": "Los Angeles Chargers",
+          "defense_team": "HOU",
+          "defense_team_name": "Houston Texans",
+          "offense_dvoa_pct": -31.2,
+          "offense_rank": 32,
+          "defense_dvoa_pct": 1.3,
+          "defense_rank": 17,
+          "rank_gap_opp_def_minus_off": -15,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 12,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "23/24",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "GB +3 vs NE -3",
+      "team_a": {
+        "circa_abbr": "GB",
+        "ftn_abbr": "GB",
+        "name": "Green Bay Packers",
+        "circa_spread": 3
+      },
+      "team_b": {
+        "circa_abbr": "NE",
+        "ftn_abbr": "NE",
+        "name": "New England Patriots",
+        "circa_spread": -3
+      },
+      "sides": [
+        {
+          "offense_team": "GB",
+          "offense_team_name": "Green Bay Packers",
+          "defense_team": "NE",
+          "defense_team_name": "New England Patriots",
+          "offense_dvoa_pct": -6.4,
+          "offense_rank": 20,
+          "defense_dvoa_pct": -7.1,
+          "defense_rank": 11,
+          "rank_gap_opp_def_minus_off": -9,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "NE",
+          "offense_team_name": "New England Patriots",
+          "defense_team": "GB",
+          "defense_team_name": "Green Bay Packers",
+          "offense_dvoa_pct": 6.9,
+          "offense_rank": 11,
+          "defense_dvoa_pct": -15.7,
+          "defense_rank": 4,
+          "rank_gap_opp_def_minus_off": -7,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 13,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "25/26",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "ARI +8.5 vs SEA -8.5",
+      "team_a": {
+        "circa_abbr": "ARI",
+        "ftn_abbr": "ARI",
+        "name": "Arizona Cardinals",
+        "circa_spread": 8.5
+      },
+      "team_b": {
+        "circa_abbr": "SEA",
+        "ftn_abbr": "SEA",
+        "name": "Seattle Seahawks",
+        "circa_spread": -8.5
+      },
+      "sides": [
+        {
+          "offense_team": "ARI",
+          "offense_team_name": "Arizona Cardinals",
+          "defense_team": "SEA",
+          "defense_team_name": "Seattle Seahawks",
+          "offense_dvoa_pct": -2.0,
+          "offense_rank": 17,
+          "defense_dvoa_pct": -19.5,
+          "defense_rank": 2,
+          "rank_gap_opp_def_minus_off": -15,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "SEA",
+          "offense_team_name": "Seattle Seahawks",
+          "defense_team": "ARI",
+          "defense_team_name": "Arizona Cardinals",
+          "offense_dvoa_pct": -10.2,
+          "offense_rank": 22,
+          "defense_dvoa_pct": 8.4,
+          "defense_rank": 25,
+          "rank_gap_opp_def_minus_off": 3,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 14,
+      "date": "2026-11-08",
+      "day": "Sun",
+      "circa_rotation": "27/28",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "TB +6 vs CHI -6",
+      "team_a": {
+        "circa_abbr": "TB",
+        "ftn_abbr": "TB",
+        "name": "Tampa Bay Buccaneers",
+        "circa_spread": 6
+      },
+      "team_b": {
+        "circa_abbr": "CHI",
+        "ftn_abbr": "CHI",
+        "name": "Chicago Bears",
+        "circa_spread": -6
+      },
+      "sides": [
+        {
+          "offense_team": "TB",
+          "offense_team_name": "Tampa Bay Buccaneers",
+          "defense_team": "CHI",
+          "defense_team_name": "Chicago Bears",
+          "offense_dvoa_pct": -5.9,
+          "offense_rank": 19,
+          "defense_dvoa_pct": 0.9,
+          "defense_rank": 16,
+          "rank_gap_opp_def_minus_off": -3,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "CHI",
+          "offense_team_name": "Chicago Bears",
+          "defense_team": "TB",
+          "defense_team_name": "Tampa Bay Buccaneers",
+          "offense_dvoa_pct": 7.0,
+          "offense_rank": 10,
+          "defense_dvoa_pct": -22.2,
+          "defense_rank": 1,
+          "rank_gap_opp_def_minus_off": -9,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    },
+    {
+      "game_index": 15,
+      "date": "2026-11-09",
+      "day": "Mon",
+      "circa_rotation": "29/30",
+      "status": "upcoming",
+      "score": null,
+      "home_away": null,
+      "home_away_note": "Circa sheet does not mark home/away; not asserted here.",
+      "circa_label": "BUF -3.5 vs MIN +3.5",
+      "team_a": {
+        "circa_abbr": "BUF",
+        "ftn_abbr": "BUF",
+        "name": "Buffalo Bills",
+        "circa_spread": -3.5
+      },
+      "team_b": {
+        "circa_abbr": "MIN",
+        "ftn_abbr": "MIN",
+        "name": "Minnesota Vikings",
+        "circa_spread": 3.5
+      },
+      "sides": [
+        {
+          "offense_team": "BUF",
+          "offense_team_name": "Buffalo Bills",
+          "defense_team": "MIN",
+          "defense_team_name": "Minnesota Vikings",
+          "offense_dvoa_pct": 23.4,
+          "offense_rank": 3,
+          "defense_dvoa_pct": -18.1,
+          "defense_rank": 3,
+          "rank_gap_opp_def_minus_off": 0,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        },
+        {
+          "offense_team": "MIN",
+          "offense_team_name": "Minnesota Vikings",
+          "defense_team": "BUF",
+          "defense_team_name": "Buffalo Bills",
+          "offense_dvoa_pct": -14.3,
+          "offense_rank": 30,
+          "defense_dvoa_pct": 4.5,
+          "defense_rank": 20,
+          "rank_gap_opp_def_minus_off": -10,
+          "rank_gap_meaning": "opponent_defense_rank minus offense_rank; positive means offense faces a worse-ranked defense. Rank gap is NOT a point edge, cover probability, or quantified advantage.",
+          "pass": null,
+          "rush": null
+        }
+      ]
+    }
+  ]
+}
